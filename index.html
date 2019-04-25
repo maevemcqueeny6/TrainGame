@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Employee Data Management</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron jumbotron-fluid bg-dark txt-light">
+                    <div class="container">
+                        <h1 class="display-4 text-light vertical-center">Employee Data Management</h1>
+                        <p class="lead text-light vertical-center">A Comprehensive Directory of Employee Billable Hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        <!-- List -->
+        <div class="row">
+            <div class="col">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Start Date</th>
+                            <th scope="col">Months Worked</th>
+                            <th scope="col">Monthly Rate ($)</th>
+                            <th scope="col">Total Billed ($)</th>
+            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Maeve</td>
+                            <td>Role</td>
+                            <td>4/12</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Philip</td>
+                            <td>Role</td>
+                            <td>4/12</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>George</td>
+                            <td>Role</td>
+                            <td>4/12</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    
+        <!-- Form -->
+        <div class="container">
+            <h2>New Employee Form</h2>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Employee Name</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="name-input" type="text" placeholder="Name...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="disabledInput" class="col-sm-2 control-label">Role</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="role-input" type="text" placeholder="Role...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Start Date (MM/DD/YYYY)</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="date-input" type="text" placeholder="Start Date...">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Monthly Rate</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="rate-input" type="text" placeholder="Monthly Rate...">
+                    </div>
+                </div>
+                <!-- Submit button -->
+                <div>
+                    <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        
+        
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script src="javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"> </script>
+</body>
+
+</html>
