@@ -1,3 +1,7 @@
 #submit {
     flex: right;
 }
+
+.container {
+    margin: 3vh;
+}
