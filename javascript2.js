@@ -48,7 +48,7 @@ dataRef.ref().on("child_added", function (childSnapshot) {
     var frequency = childSnapshot.val().rate;
 
 
-    var firstTrainConverted = moment(firstTrain, "MMMM Do YYYY, HH:mm").subtract(1, "years");
+    var firstTrainConverted = moment(firstTrain, "HH:mm").subtract(1, "years");
 
     var timedifference = moment().diff(moment(firstTrainConverted), "minutes");
 
@@ -56,7 +56,7 @@ dataRef.ref().on("child_added", function (childSnapshot) {
 
     var minutesTillTrain = frequency - timeRemaining;
 
-    var nextComingTrain = (moment().add(minutesTillTrain), "minutes");
+    var nextComingTrain = (moment().add(minutesTillTrain, "minutes").format("HH:mm"));
 
 
     $("#table").append("<tr class='well'><td class='member-name'> " +
@@ -67,7 +67,7 @@ dataRef.ref().on("child_added", function (childSnapshot) {
         " </td><td class='train-minutes-away'> " + minutesTillTrain +
         " </td></tr>");
 
-    // }, function (errorObject) {
-    //     console.log("Errors handled: " + errorObject.code);
+    }, function (errorObject) {
+        console.log("Errors handled: " + errorObject.code);
 });
 
